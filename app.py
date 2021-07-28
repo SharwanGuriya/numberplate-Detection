@@ -9,7 +9,7 @@ pytesseract.pytesseract.tesseract_cmd ='/app/.apt/usr/bin/tesseract'
 def detector( image):
   img_array=np.array(image)
   img = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)
-  classifier=cv2.CascadeClassifier('/content/drive/MyDrive/number plate detection/haarcascade_russian_plate_number.xml')
+  classifier=cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_russian_plate_number.xml")
   gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
   N_plate=classifier.detectMultiScale(gray, scaleFactor=1.38, minNeighbors=4)
   if N_plate is not None:
