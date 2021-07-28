@@ -1,5 +1,5 @@
 streamlit
 pytesseract
 numpy
-opencv-python
 PIL
+opencv-python-headless
