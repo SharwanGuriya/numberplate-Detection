@@ -4,6 +4,8 @@ import cv2
 import pytesseract
 import numpy as np
 
+pytesseract.pytesseract.tesseract_cmd ='/app/.apt/usr/bin/tesseract'
+
 def detector( image):
   img_array=np.array(image)
   img = cv2.cvtColor(img_array, cv2.COLOR_RGB2BGR)
